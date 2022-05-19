@@ -36,10 +36,9 @@ namespace atividade.View
             this.lblCor = new System.Windows.Forms.Label();
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lblResultado = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxCor = new System.Windows.Forms.ComboBox();
+            this.cbxCarro = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblNome
@@ -84,6 +83,7 @@ namespace atividade.View
             this.tbxNome.Name = "tbxNome";
             this.tbxNome.Size = new System.Drawing.Size(134, 23);
             this.tbxNome.TabIndex = 4;
+            this.tbxNome.TextChanged += new System.EventHandler(this.tbxNome_TextChanged);
             // 
             // dateTimePicker1
             // 
@@ -92,49 +92,42 @@ namespace atividade.View
             this.dateTimePicker1.Size = new System.Drawing.Size(232, 23);
             this.dateTimePicker1.TabIndex = 8;
             // 
-            // lblResultado
-            // 
-            this.lblResultado.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.lblResultado.Location = new System.Drawing.Point(422, 270);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(333, 132);
-            this.lblResultado.TabIndex = 10;
-            // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(422, 216);
+            this.btnCadastrar.Location = new System.Drawing.Point(57, 257);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(112, 39);
             this.btnCadastrar.TabIndex = 11;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // comboBox1
+            // cbxCor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxCor.FormattingEnabled = true;
+            this.cbxCor.Items.AddRange(new object[] {
             "Preto",
             "Vermelho",
             "Prata",
             "Branco",
             "Cinza"});
-            this.comboBox1.Location = new System.Drawing.Point(89, 183);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 12;
+            this.cbxCor.Location = new System.Drawing.Point(89, 183);
+            this.cbxCor.Name = "cbxCor";
+            this.cbxCor.Size = new System.Drawing.Size(121, 23);
+            this.cbxCor.TabIndex = 12;
             // 
-            // comboBox2
+            // cbxCarro
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbxCarro.FormattingEnabled = true;
+            this.cbxCarro.Items.AddRange(new object[] {
             "BMW",
             "Chevrollet",
             "Volkswagen",
-            "Nissa"});
-            this.comboBox2.Location = new System.Drawing.Point(152, 136);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(111, 23);
-            this.comboBox2.TabIndex = 13;
+            "Nissan"});
+            this.cbxCarro.Location = new System.Drawing.Point(152, 136);
+            this.cbxCarro.Name = "cbxCarro";
+            this.cbxCarro.Size = new System.Drawing.Size(111, 23);
+            this.cbxCarro.TabIndex = 13;
             // 
             // EstacionamentoKauan
             // 
@@ -142,10 +135,9 @@ namespace atividade.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxCarro);
+            this.Controls.Add(this.cbxCor);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.tbxNome);
             this.Controls.Add(this.lblCor);
@@ -168,9 +160,8 @@ namespace atividade.View
         private System.Windows.Forms.Label lblCor;
         private System.Windows.Forms.TextBox tbxNome;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxCor;
+        private System.Windows.Forms.ComboBox cbxCarro;
     }
 }

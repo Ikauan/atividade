@@ -39,7 +39,6 @@ namespace atividade.View
             this.lblMarcacarro = new System.Windows.Forms.Label();
             this.tbxPlaca = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCarro
@@ -90,6 +89,7 @@ namespace atividade.View
             this.cbxCarro.Name = "cbxCarro";
             this.cbxCarro.Size = new System.Drawing.Size(121, 23);
             this.cbxCarro.TabIndex = 4;
+            this.cbxCarro.SelectedIndexChanged += new System.EventHandler(this.cbxCarro_SelectedIndexChanged);
             // 
             // cbxCor
             // 
@@ -122,20 +122,13 @@ namespace atividade.View
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(457, 226);
+            this.btnCadastrar.Location = new System.Drawing.Point(56, 262);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(123, 34);
             this.btnCadastrar.TabIndex = 8;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(457, 289);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 103);
-            this.label1.TabIndex = 9;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // CadastroCarroKauan
             // 
@@ -143,7 +136,6 @@ namespace atividade.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.tbxPlaca);
             this.Controls.Add(this.lblMarcacarro);
@@ -172,6 +164,5 @@ namespace atividade.View
         private System.Windows.Forms.Label lblMarcacarro;
         private System.Windows.Forms.TextBox tbxPlaca;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Label label1;
     }
 }

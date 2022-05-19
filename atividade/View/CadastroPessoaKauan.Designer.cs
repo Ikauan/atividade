@@ -39,7 +39,7 @@ namespace atividade.View
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.tbxCpf = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.lblResultado = new System.Windows.Forms.Label();
+            this.lbxReusultado = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lblNome
@@ -85,6 +85,7 @@ namespace atividade.View
             this.tbxNome.Name = "tbxNome";
             this.tbxNome.Size = new System.Drawing.Size(235, 23);
             this.tbxNome.TabIndex = 4;
+            this.tbxNome.TextChanged += new System.EventHandler(this.tbx1_TextChanged);
             // 
             // tbxCelular
             // 
@@ -115,14 +116,16 @@ namespace atividade.View
             this.btnCadastrar.TabIndex = 8;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // lblResultado
+            // lbxReusultado
             // 
-            this.lblResultado.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.lblResultado.Location = new System.Drawing.Point(432, 71);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(288, 133);
-            this.lblResultado.TabIndex = 9;
+            this.lbxReusultado.FormattingEnabled = true;
+            this.lbxReusultado.ItemHeight = 15;
+            this.lbxReusultado.Location = new System.Drawing.Point(404, 71);
+            this.lbxReusultado.Name = "lbxReusultado";
+            this.lbxReusultado.Size = new System.Drawing.Size(335, 199);
+            this.lbxReusultado.TabIndex = 9;
             // 
             // CadastroPessoaKauan
             // 
@@ -130,7 +133,7 @@ namespace atividade.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblResultado);
+            this.Controls.Add(this.lbxReusultado);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.tbxCpf);
             this.Controls.Add(this.tbxEmail);
@@ -141,8 +144,10 @@ namespace atividade.View
             this.Controls.Add(this.lblCelular);
             this.Controls.Add(this.lblNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "CadastroPessoaKauan";
             this.Text = "Cadastrar";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CadastroPessoaKauan_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +165,6 @@ namespace atividade.View
         private System.Windows.Forms.TextBox tbxCpf;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.ListBox lbxReusultado;
     }
 }
